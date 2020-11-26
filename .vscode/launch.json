@@ -1,0 +1,34 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "c:/Users/mnemitz/Documents/PlatformIO/Projects/lab-5-transporting-object-student/.pio/build/a-star32U4/firmware.elf",
+            "projectEnvName": "a-star32U4",
+            "toolchainBinDir": "C:/Users/mnemitz/.platformio/packages/toolchain-atmelavr/bin",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug"
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "c:/Users/mnemitz/Documents/PlatformIO/Projects/lab-5-transporting-object-student/.pio/build/a-star32U4/firmware.elf",
+            "projectEnvName": "a-star32U4",
+            "toolchainBinDir": "C:/Users/mnemitz/.platformio/packages/toolchain-atmelavr/bin",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}
