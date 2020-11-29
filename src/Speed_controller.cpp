@@ -44,11 +44,20 @@ boolean SpeedController::MoveToPosition(float target_x, float target_y)
         float error_x = target_x - x;
         float error_y = target_y - y;
 
-        error_distance = sqrt(pow(target_x - x, 2) + pow(target_y - y, 2));
+        error_distance = sqrt(pow(error_x, 2) + pow(error_y, 2));
+        error_theta = atan2(error_y, error_x) - theta;
 
+        // float left_speed = Kp * error_distance - Kp * error_theta; // TODO Check
+        // float right_speed = Kp * error_distance + Kp * error_theta; 
 
+        // left_speed = constrain(left_speed, -50, 50);
+        // right_speed = constrain(right_speed, -50, 50);
 
-    } while (error_distance >= 0.00); //define a distance criteria that lets the robot know that it reached the waypoint.
+        Run(100, 100);
+        
+        Serial.println(error_distance);
+
+    } while (error_distance > 0.00); //define a distance criteria that lets the robot know that it reached the waypoint.
     return 1;
 }
 

@@ -5,12 +5,14 @@
 
 class SpeedController{
     private:
-        const float Kp = 0.5; //Adapt the parameters until your robot moves at the speed you command it to drive
+        const float Kp = 1.3; //Adapt the parameters until your robot moves at the speed you command it to drive
         const float Ki = 0.1; 
         float E_left = 0; 
         float E_right = 0;
         int counts = 1450; //number of counts for a 180 degree turn; you will likely have to change this
         float error_distance = 0;
+        float error_theta = 0;
+
     public:
         struct constrained_acceleration {
             float constrained_velocity_left;

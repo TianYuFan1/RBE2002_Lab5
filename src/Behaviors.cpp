@@ -40,7 +40,11 @@ void Behaviors::Run(void)
         } 
         else {
             Serial.println("start");
-            robot.MoveToPosition(0.5,0.5);
+            robot.MoveToPosition(50,50);
+            robot.MoveToPosition(1.2, 0.7);
+            robot.MoveToPosition(2.0, 1.2);
+            robot.MoveToPosition(0.1, 3);
+            robot.MoveToPosition(3, 1.8);
             Serial.println("end");
             robot_state = IDLE;
         }
