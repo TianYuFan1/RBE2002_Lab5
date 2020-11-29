@@ -37,10 +37,17 @@ boolean SpeedController::MoveToPosition(float target_x, float target_y)
 {
     do
     {    
-        //assignment
+        float x = odometry.ReadPose().X;
+        float y = odometry.ReadPose().Y;
+        float theta = odometry.ReadPose().THETA;
+
+        float error_x = target_x - x;
+        float error_y = target_y - y;
+
+        error_distance = sqrt(pow(target_x - x, 2) + pow(target_y - y, 2));
 
 
-        
+
     } while (error_distance >= 0.00); //define a distance criteria that lets the robot know that it reached the waypoint.
     return 1;
 }
