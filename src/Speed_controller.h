@@ -8,7 +8,7 @@ class SpeedController{
         const float Kp = 0.5; //Adapt the parameters until your robot moves at the speed you command it to drive
         const float Ki = 0.1; 
         const float Kp_e = 80;
-        const float Ki_e = 0;
+        const float Ki_e = 0; // Increase dis value
         float E_left = 0; 
         float E_right = 0;
         int counts = 1450; //number of counts for a 180 degree turn; you will likely have to change this
