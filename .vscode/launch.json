@@ -12,9 +12,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "c:/Users/mnemitz/Documents/PlatformIO/Projects/lab-5-transporting-object-student/.pio/build/a-star32U4/firmware.elf",
+            "executable": "c:/Users/Tian Yu Fan/Documents/PlatformIO/Projects/RBE2002/Lab5/lab-5-transporting-objects-student/.pio/build/a-star32U4/firmware.elf",
             "projectEnvName": "a-star32U4",
-            "toolchainBinDir": "C:/Users/mnemitz/.platformio/packages/toolchain-atmelavr/bin",
+            "toolchainBinDir": "C:/Users/Tian Yu Fan/.platformio/packages/toolchain-atmelavr/bin",
             "preLaunchTask": {
                 "type": "PlatformIO",
                 "task": "Pre-Debug"
@@ -25,9 +25,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "c:/Users/mnemitz/Documents/PlatformIO/Projects/lab-5-transporting-object-student/.pio/build/a-star32U4/firmware.elf",
+            "executable": "c:/Users/Tian Yu Fan/Documents/PlatformIO/Projects/RBE2002/Lab5/lab-5-transporting-objects-student/.pio/build/a-star32U4/firmware.elf",
             "projectEnvName": "a-star32U4",
-            "toolchainBinDir": "C:/Users/mnemitz/.platformio/packages/toolchain-atmelavr/bin",
+            "toolchainBinDir": "C:/Users/Tian Yu Fan/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart"
         }
     ]
