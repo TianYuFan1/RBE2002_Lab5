@@ -44,7 +44,7 @@ void Behaviors::Run(void)
             robot.MoveToPosition(0.1, 0.2);
             robot.MoveToPosition(0.1, 0.5);
             robot.MoveToPosition(0.3, 0.7);
-            robot.MoveToPosition(0.5, 0.9);
+            robot.MoveToPosition(0.5, 0.5);
             Serial.println("end");
             robot_state = IDLE;
         }
