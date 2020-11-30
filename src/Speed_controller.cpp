@@ -74,7 +74,7 @@ boolean SpeedController::MoveToPosition(float target_x, float target_y)
         
         Serial.println(error_distance);
 
-    } while (error_distance > 0.01); //define a distance criteria that lets the robot know that it reached the waypoint.
+    } while (error_distance > 0.02); //define a distance criteria that lets the robot know that it reached the waypoint.
     return 1;
 }
 

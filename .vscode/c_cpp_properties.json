@@ -6,33 +6,32 @@
         {
             "name": "Win32",
             "includePath": [
-                "c:/Users/Tian Yu Fan/Documents/PlatformIO/Projects/RBE2002/Lab5/lab-5-transporting-objects-student/include",
-                "c:/Users/Tian Yu Fan/Documents/PlatformIO/Projects/RBE2002/Lab5/lab-5-transporting-objects-student/src",
-                "c:/Users/Tian Yu Fan/Documents/PlatformIO/Projects/RBE2002/Lab5/lab-5-transporting-objects-student/.pio/libdeps/a-star32U4/wpi-32u4-library/src",
-                "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
-                "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/cores/arduino",
-                "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/variants/leonardo",
-                "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-                "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-                "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-                "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                "C:/Users/Tian Yu Fan/.platformio/packages/tool-unity",
-                ""
+                "c:/Users/allon/Documents/PlatformIO/Projects/RBE2002_Lab5/include",
+                "c:/Users/allon/Documents/PlatformIO/Projects/RBE2002_Lab5/src",
+                "c:/Users/allon/Documents/PlatformIO/Projects/RBE2002_Lab5/.pio/libdeps/a-star32U4/wpi-32u4-library/src",
+                "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "C:/Users/allon/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/allon/.platformio/packages/framework-arduino-avr/variants/leonardo",
+                "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "C:/Users/allon/.platformio/packages/tool-unity"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "c:/Users/Tian Yu Fan/Documents/PlatformIO/Projects/RBE2002/Lab5/lab-5-transporting-objects-student/include",
-                    "c:/Users/Tian Yu Fan/Documents/PlatformIO/Projects/RBE2002/Lab5/lab-5-transporting-objects-student/src",
-                    "c:/Users/Tian Yu Fan/Documents/PlatformIO/Projects/RBE2002/Lab5/lab-5-transporting-objects-student/.pio/libdeps/a-star32U4/wpi-32u4-library/src",
-                    "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
-                    "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/cores/arduino",
-                    "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/variants/leonardo",
-                    "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-                    "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-                    "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-                    "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                    "C:/Users/Tian Yu Fan/.platformio/packages/tool-unity"
+                    "c:/Users/allon/Documents/PlatformIO/Projects/RBE2002_Lab5/include",
+                    "c:/Users/allon/Documents/PlatformIO/Projects/RBE2002_Lab5/src",
+                    "c:/Users/allon/Documents/PlatformIO/Projects/RBE2002_Lab5/.pio/libdeps/a-star32U4/wpi-32u4-library/src",
+                    "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "C:/Users/allon/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/Users/allon/.platformio/packages/framework-arduino-avr/variants/leonardo",
+                    "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "C:/Users/allon/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "C:/Users/allon/.platformio/packages/tool-unity"
                 ]
             },
             "defines": [
@@ -51,7 +50,7 @@
             "intelliSenseMode": "gcc-x64",
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "compilerPath": "C:/Users/Tian Yu Fan/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerPath": "C:/Users/allon/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
             "compilerArgs": [
                 "-mmcu=atmega32u4",
                 ""
