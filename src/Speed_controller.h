@@ -31,6 +31,7 @@ class SpeedController{
         boolean Curved(int,int,int); //speed left, speed right, duration
         boolean MoveToPosition(float,float); //target_x, target_y
         void Problem1(void);
+        void Problem2(void);
         void Stop(void);
 };
 

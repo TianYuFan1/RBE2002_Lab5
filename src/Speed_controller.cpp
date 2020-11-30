@@ -36,21 +36,6 @@ void SpeedController::Run(float target_velocity_left, float target_velocity_righ
 boolean SpeedController::MoveToPosition(float target_x, float target_y)
 {
     do {    
-
-
-        //         const float Ki_e = 0;
-        // float E_left = 0; 
-        // float E_right = 0;
-        // int counts = 1450; //number of counts for a 180 degree turn; you will likely have to change this
-        // float error_distance = 0;
-        // float error_theta = 0;
-        // float error_distance_sum = 0;
-        // float error_thata_sum = 0;
-
-
-
-
-        // PI
         float x = odometry.ReadPose().X;
         float y = odometry.ReadPose().Y;
         float theta = odometry.ReadPose().THETA;
@@ -61,11 +46,8 @@ boolean SpeedController::MoveToPosition(float target_x, float target_y)
         error_distance = sqrt(pow(error_x, 2) + pow(error_y, 2));
         error_theta = atan2(error_y, error_x) - theta;
 
-        error_distance_sum += error_distance;
-        error_theta_sum += error_theta;
-
-        float left_speed = Kp_e * error_distance + Ki_e * error_distance_sum - Kp_e * error_theta - Ki_e * error_theta_sum; // TODO Check
-        float right_speed = Kp_e * error_distance + Ki_e * error_distance_sum + Kp_e * error_theta + Ki_e * error_theta_sum; 
+        float left_speed = Kp_e * error_distance - Kp_e * error_theta; // TODO Check
+        float right_speed = Kp_e * error_distance + Kp_e * error_theta; 
 
         left_speed = constrain(left_speed, -75, 75);
         right_speed = constrain(right_speed, -75, 75);
@@ -74,10 +56,35 @@ boolean SpeedController::MoveToPosition(float target_x, float target_y)
         
         Serial.println(error_distance);
 
-    } while (error_distance > 0.02); //define a distance criteria that lets the robot know that it reached the waypoint.
+    } while (error_distance > 0.03); //define a distance criteria that lets the robot know that it reached the waypoint.
     return 1;
 }
 
+void SpeedController::Problem2(void) {
+        //     // PI
+        // float x = odometry.ReadPose().X;
+        // float y = odometry.ReadPose().Y;
+        // float theta = odometry.ReadPose().THETA;
+
+        // float error_x = target_x - x;
+        // float error_y = target_y - y;
+
+        // error_distance = sqrt(pow(error_x, 2) + pow(error_y, 2));
+        // error_theta = atan2(error_y, error_x) - theta;
+
+        // error_distance_sum += error_distance;
+        // error_theta_sum += error_theta;
+
+        // float left_speed = Kp_e * error_distance + Ki_e * error_distance_sum - Kp_e * error_theta - Ki_e * error_theta_sum; // TODO Check
+        // float right_speed = Kp_e * error_distance + Ki_e * error_distance_sum + Kp_e * error_theta + Ki_e * error_theta_sum; 
+
+        // left_speed = constrain(left_speed, -75, 75);
+        // right_speed = constrain(right_speed, -75, 75);
+
+        // Run(left_speed, right_speed);
+        
+        // Serial.println(error_distance);
+}
 void SpeedController::Problem1(void) {
         // float x = odometry.ReadPose().X;
         // float y = odometry.ReadPose().Y;
