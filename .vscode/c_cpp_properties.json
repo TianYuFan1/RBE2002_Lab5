@@ -16,7 +16,8 @@
                 "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/HID/src",
                 "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
                 "C:/Users/Tian Yu Fan/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                "C:/Users/Tian Yu Fan/.platformio/packages/tool-unity"
+                "C:/Users/Tian Yu Fan/.platformio/packages/tool-unity",
+                ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,

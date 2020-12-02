@@ -43,8 +43,11 @@ boolean SpeedController::MoveToPosition(float target_x, float target_y)
         float error_x = target_x - x;
         float error_y = target_y - y;
 
-        error_distance = sqrt(pow(error_x, 2) + pow(error_y, 2));
+        error_distance = sqrt(pow(error_x, 2) + pow(error_y, 2)) * 1000;
         error_theta = atan2(error_y, error_x) - theta;
+
+        if (error_theta > (PI/180) * 185) {error_theta -= 2 * PI;}
+        else if (error_theta < -(PI/180) * 185) {error_theta += 2 * PI;}
 
         float left_speed = Kp_e * error_distance - Kp_e * error_theta; // TODO Check
         float right_speed = Kp_e * error_distance + Kp_e * error_theta; 
@@ -85,6 +88,7 @@ void SpeedController::Problem2(void) {
         
         // Serial.println(error_distance);
 }
+
 void SpeedController::Problem1(void) {
         // float x = odometry.ReadPose().X;
         // float y = odometry.ReadPose().Y;
@@ -127,7 +131,11 @@ boolean SpeedController::Straight(int target_velocity, int time)
     motors.setEfforts(0, 0);
     unsigned long now = millis();
 
+    float current_velocity = 0;
+
     while ((unsigned long)(millis() - now) <= time*1000){
+        // if ((current_velocity < target_velocity) && ((unsigned long) (millis() - now) <= 2000)) {current_velocity = current_velocity + 0.008;}
+        // if (((unsigned long) (millis() - now) >= 4000)) {current_velocity = current_velocity - 0.008;}
         Run(target_velocity,target_velocity);
     }
     motors.setEfforts(0, 0);

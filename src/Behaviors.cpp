@@ -39,6 +39,7 @@ void Behaviors::Run(void)
             robot.Stop();             
         } 
         else {
+            // robot.Straight(200, 5);
             Serial.println("start");
             robot.MoveToPosition(0.3,0.1);
             robot.MoveToPosition(0.3, 0.3);
