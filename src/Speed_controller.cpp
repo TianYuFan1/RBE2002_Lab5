@@ -36,6 +36,7 @@ void SpeedController::Run(float target_velocity_left, float target_velocity_righ
 boolean SpeedController::MoveToPosition(float target_x, float target_y)
 {
     do {    
+            // PI
         float x = odometry.ReadPose().X;
         float y = odometry.ReadPose().Y;
         float theta = odometry.ReadPose().THETA;
@@ -43,14 +44,17 @@ boolean SpeedController::MoveToPosition(float target_x, float target_y)
         float error_x = target_x - x;
         float error_y = target_y - y;
 
-        error_distance = sqrt(pow(error_x, 2) + pow(error_y, 2)) * 1000;
+        error_distance = sqrt(pow(error_x, 2) + pow(error_y, 2));
         error_theta = atan2(error_y, error_x) - theta;
 
         if (error_theta > (PI/180) * 185) {error_theta -= 2 * PI;}
         else if (error_theta < -(PI/180) * 185) {error_theta += 2 * PI;}
 
-        float left_speed = Kp_e * error_distance - Kp_e * error_theta; // TODO Check
-        float right_speed = Kp_e * error_distance + Kp_e * error_theta; 
+        error_distance_sum += error_distance;
+        error_theta_sum += error_theta;
+
+        float left_speed = Kp_e * error_distance + Ki_e * error_distance_sum - Kp_e * error_theta - Ki_e * error_theta_sum; // TODO Check
+        float right_speed = Kp_e * error_distance + Ki_e * error_distance_sum + Kp_e * error_theta + Ki_e * error_theta_sum; 
 
         left_speed = constrain(left_speed, -75, 75);
         right_speed = constrain(right_speed, -75, 75);
@@ -59,7 +63,7 @@ boolean SpeedController::MoveToPosition(float target_x, float target_y)
         
         Serial.println(error_distance);
 
-    } while (error_distance > 0.03); //define a distance criteria that lets the robot know that it reached the waypoint.
+    } while (error_distance > 0.01); //define a distance criteria that lets the robot know that it reached the waypoint.
     return 1;
 }
 

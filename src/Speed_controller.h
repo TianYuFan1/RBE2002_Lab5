@@ -7,7 +7,7 @@ class SpeedController{
     private:
         const float Kp = 0.5; //Adapt the parameters until your robot moves at the speed you command it to drive
         const float Ki = 0.1; 
-        const float Kp_e = 0.1;
+        const float Kp_e = 100;
         const float Ki_e = 0.01; 
         float E_left = 0; 
         float E_right = 0;
